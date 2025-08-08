@@ -1,0 +1,226 @@
+<!DOCTYPE html><html lang="id"><head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#4b0b82">
+  <meta property="og:title" content="Panel Termurah, Nokos WhatsApp, Jasa Run Bot">
+  <meta property="og:description" content="Temukan panel termurah, Nokos WhatsApp, jasa run bot dan lainnya di Ganzz Market!">
+  <meta property="og:image" content="https://files.catbox.moe/zg2k2j.jpg">
+  <meta property="og:url" content="https://depppmarket.site">
+  <title>Deppp Market</title>
+  <link href="assets/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/css/css2" rel="stylesheet">
+  <script src="assets/js/tsparticles.bundle.min.js"></script>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Orbitron', sans-serif;
+      background: linear-gradient(135deg, #250040, #000000);
+      color: #ffffff;
+      overflow-x: hidden;
+    }
+    .particles-bg {
+      position: fixed;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+    }
+    .container-custom {
+      padding: 2rem;
+      max-width: 600px;
+      margin: auto;
+    }
+    .logo {
+      width: 120px;
+      border-radius: 20px;
+      box-shadow: 0 0 10px #fff5;
+    }
+    .card-glass {
+      background: rgba(255,255,255,0.05);
+      border: 1px solid rgba(255,255,255,0.1);
+      backdrop-filter: blur(10px);
+      border-radius: 20px;
+      padding: 1.5rem;
+      margin-bottom: 1.5rem;
+      box-shadow: 0 0 10px rgba(255,255,255,0.1);
+      opacity: 0;
+      transform: translateY(20px);
+      transition: all 0.6s ease;
+    }
+    .card-glass.show {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    .btn-purple {
+      background: #7e0fff;
+      border: none;
+      color: white;
+      padding: 10px 20px;
+      border-radius: 12px;
+      transition: all 0.3s ease;
+    }
+    .btn-purple:hover {
+      background: #9c4dff;
+    }
+    .footer-note {
+      text-align: center;
+      font-size: 12px;
+      opacity: 0.3;
+      margin-top: 2rem;
+    }
+    .glow-text {
+      text-shadow: 0 0 10px #9a63ff;
+    }
+  </style>
+</head>
+<body>
+  <div id="tsparticles" class="particles-bg"></div>
+
+  <div class="container-custom text-center">
+    <img src="assets/img/zg2k2j.jpg" alt="logo" class="logo mb-3">
+    <h1 class="fw-bold glow-text">Ganzz Market</h1>
+    <p class="text-light">Jasa run bot, Nokos WhatsApp, Panel murah berkualitas</p>
+    <div class="text-secondary mb-4" id="datetime">Memuat waktu...</div>
+    <div class="alert alert-info text-dark">Selamat datang di <b>Ganzz Market</b>! Pilih menu di bawah untuk mulai eksplor 🚀</div>
+
+    <!-- List Panel -->
+    <button class="btn btn-purple mb-3" onclick="toggleList('listPanelContainer', this)">📋 Tampilkan List Panel</button>
+    <div id="listPanelContainer" style="display:none">
+      <div class="card-glass">🤖 RAM 5GB CPU 100% : RP 2.000</div>
+      <div class="card-glass">🤖 RAM 6GB CPU 120% : RP 3.000</div>
+      <div class="card-glass">🤖 RAM 7GB CPU 140% : RP 4.500</div>
+      <div class="card-glass">🤖 RAM 8GB CPU 160% : RP 5.000</div>
+      <div class="card-glass">🤖 RAM 9GB CPU 180% : RP 6.000</div>
+      <div class="card-glass">🤖 RAM 10GB CPU 200% : RP 7.000</div>
+      <div class="card-glass">🤖 RAM Unlimited CPU ♾️ : RP 10.000</div>
+    </div>
+
+    <!-- Keuntungan -->
+    <button class="btn btn-purple mb-3" onclick="toggleList('keuntunganContainer', this)">✅ Tampilkan Keuntungan</button>
+    <div id="keuntunganContainer" style="display:none">
+      <div class="card-glass">✔️ SERVER FRESH</div>
+      <div class="card-glass">✔️ ANTi INTIP / COLONG</div>
+      <div class="card-glass">✔️ GARANSI 15 HARI</div>
+      <div class="card-glass">✔️ SPEK PANEL GAHAR R32 C8</div>
+    </div>
+
+    <!-- Pembayaran -->
+    <button class="btn btn-purple mb-3" onclick="toggleList('pembayaranContainer', this)">💳 Tampilkan Pembayaran</button>
+    <div id="pembayaranContainer" style="display:none">
+      <div class="card-glass">
+        Dana : <b id="nomor">082257933475</b><br>
+        <button class="btn btn-purple btn-sm mt-2" onclick="copyText('082257933475')">Salin Nomor</button>
+      </div>
+      <div class="card-glass">
+        <p class="mt-3 mb-1">QRIS:</p>
+        <img src="assets/img/vtgud1.jpg" alt="QRIS" class="img-fluid rounded">
+      </div>
+    </div>
+
+    <!-- Nokos -->
+    <button class="btn btn-purple mb-3" onclick="toggleList('nokosContainer', this)">📱 Tampilkan List NOKOS</button>
+    <div id="nokosContainer" style="display:none">
+      <div class="card-glass">📱 Nokos Indo : 7k</div>
+      <div class="card-glass">📱 Nokos Luar Random : 5k</div>
+      <div class="card-glass">Kenon? 100% bukan kesalahan admin tapi kesalahan user</div>
+      <div class="card-glass">All trx no reff.</div>
+      <div class="card-glass">PERINGATAN JIKA SUDAH BUY NOKOS, DIHARAP DIAMKAN DULU 1 HARI</div>
+    </div>
+
+    <!-- Tentang Admin -->
+    <button class="btn btn-purple mb-3" onclick="toggleList('tentangAdminContainer', this)">👤 Tampilkan Tentang Admin</button>
+    <div id="tentangAdminContainer" style="display:none">
+      <div class="card-glass">🧑‍💻 <strong>Nama:</strong> Ganzz Store</div>
+      <div class="card-glass">🎂 <strong>Umur:</strong> Hanya tuhan yang tau</div>
+      <div class="card-glass">🌍 <strong>Lokasi:</strong> Isekai</div>
+      <div class="card-glass">
+        📝 <strong>Deskripsi:</strong><br>
+        Saya adalah penyedia jasa run bot, menjual panel murah, dan Nokos WhatsApp. Fast respon, harga bersahabat, dan garansi jelas. Siap bantu kebutuhan digital kamu 24/7, saat saya tidak sibuk.
+      </div>
+    </div>
+
+    <!-- Tombol Seckles dipisah -->
+    <button class="btn btn-purple w-100 mb-3" onclick="alert('Nyari seckles? Hubungi admin di Telegram ya! 😎')">
+      🔍 Nyari seckles gag? Hubungi admin aja 😎
+    </button>
+
+    <!-- Kontak Telegram -->
+    <a href="https://t.me/GanzzStorereal" target="_blank" class="btn btn-purple w-100 mb-3">💬 Chat Admin via Telegram</a>
+
+    <!-- Footer -->
+    <div class="footer-note">© 2025 Ganzz Market | Be Smart Buyer</div>
+  </div>
+
+  <!-- Musik & Suara Klik -->
+  <audio id="bgmusic" autoplay="" loop="" hidden="">
+    <source src="assets/media/9uy9wn.m4a" type="audio/mpeg">
+  </audio>
+  <audio id="clickSound" src="https://cdn.pixabay.com/audio/2022/03/15/audio_6dbb3d216c.mp3" preload="auto"></audio>
+
+  <!-- Script -->
+  <script>
+    setInterval(() => {
+      const now = new Date();
+      const tanggal = now.toLocaleDateString('id-ID', {
+        weekday: 'long', year: 'numeric', month: 'long', day: 'numeric'
+      });
+      const waktu = now.toLocaleTimeString('id-ID');
+      document.getElementById('datetime').innerText = `${tanggal} - ${waktu}`;
+    }, 1000);
+
+    function copyText(text) {
+      navigator.clipboard.writeText(text);
+      alert('Nomor berhasil disalin: ' + text);
+    }
+
+    function toggleList(id, button) {
+      const clickSound = document.getElementById('clickSound');
+      clickSound.currentTime = 0;
+      clickSound.play();
+
+      const container = document.getElementById(id);
+      const showing = container.style.display === 'block';
+      container.style.display = showing ? 'none' : 'block';
+      button.innerText = button.innerText.replace(showing ? 'Sembunyikan' : 'Tampilkan', showing ? 'Tampilkan' : 'Sembunyikan');
+      if (!showing) {
+        setTimeout(() => {
+          container.querySelectorAll('.card-glass').forEach((el, i) => {
+            setTimeout(() => el.classList.add('show'), i * 100);
+          });
+        }, 100);
+      } else {
+        container.querySelectorAll('.card-glass').forEach(el => el.classList.remove('show'));
+      }
+    }
+
+    tsParticles.load("tsparticles", {
+      fullScreen: { enable: true, zIndex: -1 },
+      particles: {
+        number: { value: 60 },
+        color: { value: "#ffffff" },
+        shape: { type: "circle" },
+        opacity: { value: 0.3 },
+        size: { value: 2 },
+        move: { enable: true, speed: 0.5 }
+      },
+      interactivity: {
+        events: { onhover: { enable: true, mode: "repulse" } },
+        modes: { repulse: { distance: 50 } }
+      },
+      background: { color: "transparent" }
+    });
+
+    document.addEventListener('DOMContentLoaded', () => {
+      const audio = document.getElementById('bgmusic');
+      const resumeAudio = () => {
+        audio.play();
+        document.removeEventListener('click', resumeAudio);
+      };
+      if (audio.paused) {
+        document.addEventListener('click', resumeAudio);
+      }
+    });
+  </script>
+  <script src="assets/js/bootstrap.bundle.min.js"></script>
+
+
+</body></html>
